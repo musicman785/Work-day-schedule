@@ -1,44 +1,9 @@
 # Work-day-schedule
-# 05 Third-Party APIs: Work Day Scheduler
 
-Create a simple calendar application that allows the user to save events for each hour of the day. This app will run in the browser and feature dynamically updated HTML and CSS powered by jQuery.
+1. html set up is a basic table. This way, I found, made it easier for me to separate the rows and columns. Then I added classes to the rows and a textarea tag for the user input. The classes made it easier to work with the jquery manipulation. 
 
-You'll need to use the [Moment.js](https://momentjs.com/) library to work with date and time. Be sure to read the documentation carefully and concentrate on using Moment.js in the browser.
+2. Made minor changes to the css since most of it was already pre-loaded.
 
-## User Story
+3. Began doing pseudo code for the variables first and decided that a for loop would suit best because I could simply compare time slots to teh moment.js api and get the color of the row correct based on the time of day (PST). I used an array and a parseInt on the rows to be able to compare numbers and not strings, as the first attempted code did and did not render the results desired.
 
-```
-AS AN employee with a busy schedule
-I WANT to add important events to a daily planner
-SO THAT I can manage my time effectively
-```
 
-## Acceptance Criteria
-
-```
-GIVEN I am using a daily planner to create a schedule
-WHEN I open the planner
-THEN the current day is displayed at the top of the calendar
-WHEN I scroll down
-THEN I am presented with timeblocks for standard business hours
-WHEN I view the timeblocks for that day
-THEN each timeblock is color coded to indicate whether it is in the past, present, or future
-WHEN I click into a timeblock
-THEN I can enter an event
-WHEN I click the save button for that timeblock
-THEN the text for that event is saved in local storage
-WHEN I refresh the page
-THEN the saved events persist
-```
-
-The following animation demonstrates the application functionality:
-
-![day planner demo](./Assets/05-third-party-apis-homework-demo.gif)
-
-## Review
-
-You are required to submit the following for review:
-
-* The URL of the deployed application.
-
-* The URL of the GitHub repository. Give the repository a unique name and include a README describing the project.
