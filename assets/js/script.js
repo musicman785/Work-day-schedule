@@ -18,7 +18,7 @@ $(document).ready(function () {
     var colorRows = $(".time-row");
     // DOM var to target text area in html
     var userInput = $(".description");
-    console.log(userInput);
+
 
     // for loop compares times between array and rows
     for (var i = 0; i < timeArray.length; i++) {
@@ -44,6 +44,37 @@ $(document).ready(function () {
         }
 
     }
+
+    var printLast = JSON.parse(localStorage.getItem("textArea"));
+
+    if (printLast !== null) {
+        // Holds previous user input in 9am row on the browser
+        $(userInput[0]).text(printLast.nineAm);
+        // Holds previous user input in 10am row on the browser
+        $(userInput[1]).text(printLast.tenAm);
+        // Holds previous user input in 11am row on the browser
+        $(userInput[2]).text(printLast.elevenAm);
+        // Holds previous user input in 12pm row on the browser
+        $(userInput[3]).text(printLast.twelveAm);
+        // Holds previous user input in 1pm row on the browser
+        $(userInput[4]).text(printLast.onePm);
+        // Holds previous user input in 2pm row on the browser
+        $(userInput[5]).text(printLast.twoPm);
+        // Holds previous user input in 3pm row on the browser
+        $(userInput[6]).text(printLast.threePm);
+        // Holds previous user input in 4pm row on the browser
+        $(userInput[7]).text(printLast.fourPm);
+        // Holds previous user input in 5pm row on the browser
+        $(userInput[8]).text(printLast.fivePm);
+        // Holds previous user input in 6pm row on the browser
+        $(userInput[9]).text(printLast.sixPm);
+    };
+
+
+
+
+
+
 
     // event listener for buttons to activate local storage
     $(".saveBtn").click(function (e) {
@@ -76,15 +107,11 @@ $(document).ready(function () {
 
         localStorage.setItem("textArea", JSON.stringify(textArea));
 
-       
-
-
-
     });
 
-    function holdInput() {
 
-    }
+            
+
 
 });
 
