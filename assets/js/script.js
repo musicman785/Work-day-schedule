@@ -8,28 +8,36 @@ $(document).ready(function () {
     $("#currentDay").text(m);
 
 
-
+    // variable holds current time (PST)
     var currentTime = moment().format("H");
+    // variable to change current time to number
     var currentTimeNum = parseInt(currentTime);
+    // array with numbers to compare to current time
     var timeArray = [9, 10, 11, 12, 13, 14, 15, 16, 17, 18];
+    // DOM var to target rows in html
     var colorRows = $(".time-row");
-    console.log(colorRows);
+    // DOM var to target text area in html
+    var userInput = $(".description");
+    console.log(userInput);
 
+    // for loop compares times between array and rows
     for (var i = 0; i < timeArray.length; i++) {
+        // var holds time array index
         var timeLoop = timeArray[i];
+        //var holds rows time index
         var colorRowLoop = colorRows[i];
 
-
+        // condition compares if array time and row time is same and sets row color to red
         if (timeLoop === currentTimeNum) {
 
             $(colorRowLoop).addClass("present");
 
-        }
+        }//if time of row is less than current time sets row color to grey
         if (timeLoop < currentTimeNum) {
 
             $(colorRowLoop).addClass("past");
 
-        }
+        }// if time of row is greater than current time sets row color to green
         if (timeLoop > currentTimeNum) {
 
             $(colorRowLoop).addClass("future");
@@ -37,15 +45,52 @@ $(document).ready(function () {
 
     }
 
+    // event listener for buttons to activate local storage
+    $(".saveBtn").click(function (e) {
+        e.preventDefault();
+        // Var stores rows as objects value pairs to set text to local storage
+        var textArea = {
+            // object value pair for row 9am
+            nineAm: userInput[0].value.trim(),
+            // object value pair for row 10am
+            tenAm: userInput[1].value.trim(),
+            // object value pair for row 11am
+            elevenAm: userInput[2].value.trim(),
+            // object value pair for row 12pm
+            twelveAm: userInput[3].value.trim(),
+            // object value pair for row 1pm
+            onePm: userInput[4].value.trim(),
+            // object value pair for row 2pm
+            twoPm: userInput[5].value.trim(),
+            // object value pair for row 3pm
+            threePm: userInput[6].value.trim(),
+            // object value pair for row 4pm
+            fourPm: userInput[7].value.trim(),
+            // object value pair for row 5pm
+            fivePm: userInput[8].value.trim(),
+            // object value pair for row 6pm
+            sixPm: userInput[9].value.trim(),
+        }
 
 
+
+        localStorage.setItem("textArea", JSON.stringify(textArea));
+
+       
+
+
+
+    });
+
+    function holdInput() {
+
+    }
 
 });
-// event listener for buttons to activate local storage
-// look to activity 23 week for   starting from line 42
 
 
-// use buttons to set items to local storage 
 
 
-// questions for tutor 1. How to attach time to rows?
+
+
+
