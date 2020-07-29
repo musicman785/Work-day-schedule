@@ -1,15 +1,58 @@
 # Work-day-schedule
 
-1. html set up is a basic table. This way, I found, made it easier for me to separate the rows and columns. Then I added classes to the rows and a textarea tag for the user input. The classes made it easier to work with the jquery manipulation. 
+![GitHub repo size](https://img.shields.io/github/repo-size/musicman785/Work-day-schedule?logo=github)
 
-2. Made minor changes to the css since most of it was already pre-loaded.
+![GitHub top language](https://img.shields.io/github/languages/top/musicman785/Work-day-schedule?color=%230f0&logo=github&logoColor=%230f0)
 
-3. Began doing pseudo code for the variables first and decided that a for loop would suit best because I could simply compare time slots to teh moment.js api and get the color of the row correct based on the time of day (PST). I used an array and a parseInt on the rows to be able to compare numbers and not strings, as the first attempted code did yet did not render the results desired.
+![GitHub last commit](https://img.shields.io/github/last-commit/musicman785/Work-day-schedule?color=%23f0f&logo=github&logoColor=%23f0f)
 
-4. Comparing the numbers worked and I was able to get the rows to display the proper color based on current time. Next I used a object value pair variable to pass the strings into the browser locat storage using the JSON.strigify format. The results to the local storage was desired but the input text in the text area would not remain if browser was refreshed. 
+Client side application records work day tasks in time slots. Schedule tasks for later in the day in the green slots or current time in the red slot. Tasks that have already be done will be displayed in the grey slots. Time slots will change color dyamically based on current time of day.
 
-5. Was finally able to hold the input on the text area using the JSON.parse method with the local storage. Now new input can be added and old input still will display on the browser. 
+[Link to page](https://musicman785.github.io/Work-day-schedule/)
 
-6. Final submission: All code now works proplerly on the browser side. 
+# Technologies Used
 
+> 1. Html
+> 2. CSS
+> 3. Javascript
+> 4. Moment Api
 
+# Table of Contents
+
+- [Instructions](#instructions)
+- [License](#license)
+- [Contributors](#contributors)
+- [Gif](#gif)
+- [Author](#author)
+
+## Instructions
+
+> Open your browser. Navigate to https://musicman785.github.io/Work-day-schedule/ and hit enter. Once browser window opens, begin entering work day tasks by clicking in input field and hit save icon to save talk into field. To remove task simply click in input field once more clear text and click save icon again.
+
+## License
+
+[Not Applicable](#)
+
+## Contributors
+
+## Gif:
+
+[/assets/images/giffy.gif]()
+
+[musicman785](http://github.com/musicman785)
+
+## Gif
+
+![gif](assets/images/giffy.gif)
+
+## Author
+
+![ProfileImage](https://avatars2.githubusercontent.com/u/62310334?v=4)
+
+**musicman785**
+
+Email: null
+
+Location: Los Angeles
+
+Github: https://github.com/musicman785
